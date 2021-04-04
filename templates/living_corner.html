@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!--Основная часть-->
+<div class="main">
+	<h1 style="text-align: center;">Живой уголок</h1>
+    <div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="list-group" style="margin-left: 5%;">
+					{% set ns = namespace(foo=2) %}
+					<p>
+						{% for item in data %}
+							{% if ns.foo % 2 == 0 %}
+								<br><br>
+							{% endif %}
+						{% set ns.foo = ns.foo + 1 %}
+						<a href="{{ item['img'] }}"><img src="{{ item['img'] }}" width="402" style="border-radius: 10px;border: 20px;" alt="картинка не нашлась"></a>
+						{% endfor %}
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
