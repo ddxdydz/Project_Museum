@@ -2,9 +2,7 @@ import os
 from csv import DictReader
 from requests import get
 
-from flask import Flask, request, render_template, redirect, abort, session, url_for
-from flask_login import LoginManager, login_user, login_required, logout_user, current_user
-from flask_restful import abort, Api
+from flask import Flask, render_template
 
 from data import db_session
 from data.__all_models import *
@@ -13,18 +11,8 @@ from forms.loginform import LoginForm
 from forms.topicform import TopicForm
 from forms.questionform import QuestionForm
 
-ROLES = ["user", "admin"]
-
-TOPIC_IMG_DIR = 'static/img/topic_img'
-QUESTION_IMG_DIR = 'static/img/quest_img'
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'I2D4423D2Q53D'
-
-# login_manager = LoginManager()
-# login_manager.init_app(app)
-
-api = Api(app)
 
 
 @app.route('/')
