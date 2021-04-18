@@ -12,30 +12,63 @@
 	<blockquote title="blockquote">Эта группа посвящена Краеведческому музею имени заслуженного учителя РФ П. М. Петренко, г. Кемерово, МБОУ "СОШ №11".</blockquote>
 	<a href="https://yadi.sk/i/MkHxmwC-bY9QjQ">Положение о музее-комплексе им. П.М. Петренко</a><br>
 	<a href="https://yadi.sk/d/Aqb5rn7QKBlOKQ?w=1">Видео экскурсии</a><br><br>
-	<!--Новости-->
-	<h1>Новости:</h1>
 
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<div class="list-group">
-					{% for item in data %}
-					<div class="list-group-item list-group-item-action">
-						<p style="font-size: 24px;">{{ item['title'] }}</p>
-						<p>{{ item['text'] }}</p>
-						{% if item['scr'] %}
-						<p><a href="{{ item['scr'] }}">{{ item['scr'] }}</a></p>
-						{% endif %}
-						{% if item['type'] == 'mp4' %}
-						<iframe src="{{ item['img'] }}" style="width: 100%; min-height: 500px;border-radius: 10px;display: block;margin-left: auto;margin-right: auto; border: 2px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						{% else %}
-						<img src="{{ item['img'] }}" style="border-radius: 10px;border: 2px; width: 100%; height: auto;border-radius: 10px;display: block;margin-left: auto;margin-right: auto; border: 2px;" alt="картинка не нашлась">
-						{% endif %}
+	<div id="col1" style="width: 75%; float: left;">
+		<!--Новости-->
+		<h1 style="text-align: center;">Новости музея:</h1>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="list-group">
+						{% for item in data %}
+						<div class="list-group-item list-group-item-action">
+							<p style="font-size: 24px;">{{ item['title'] }}</p>
+							<p>{{ item['text'] }}</p>
+							{% if item['scr'] %}
+							<p><a href="{{ item['scr'] }}">{{ item['scr'] }}</a></p>
+							{% endif %}
+							{% if item['type'] == 'mp4' %}
+							<iframe src="{{ item['img'] }}" style="width: 100%; min-height: 350px;border-radius: 10px;display: block;margin-left: auto;margin-right: auto; border: 2px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							{% else %}
+							<img src="{{ item['img'] }}" style="border-radius: 10px;border: 2px; width: 100%; height: auto;border-radius: 10px;display: block;margin-left: auto;margin-right: auto; border: 2px;" alt="картинка не нашлась">
+							{% endif %}
+						</div>
+						{% endfor %}
 					</div>
-					{% endfor %}
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<div id="col2" style="width: 25%; float: right;">
+		<iframe src="https://calendar.google.com/calendar/embed?src=zil10%40inbox.ru&ctz=Asia%2FNovokuznetsk" style="border: 0" width=100% height='300px' frameborder="0" scrolling="no"></iframe><br><br>
+		<img alt="300_let_Kuzbass.jpg" src="/static/img/300year.jpg" width="100%" title="300_let_Kuzbass.jpg" style="border: 1px solid #e2e2e2;"><br><br>
+		<iframe style="border-style: none;width:100%" src="http://xn--300-5cde9au3dap.xn--p1ai/timer/index.php">
+    	    <html>
+			<head>
+				<style>body { padding: 0; margin: 0; cursor: pointer; }</style>
+				<script src="https://xn--300-5cde9au3dap.xn--p1ai/timer/timer-code.js"></script>
+				<script src="https://xn--300-5cde9au3dap.xn--p1ai/timer/timer-base.js"></script>
+				<link href="https://xn--300-5cde9au3dap.xn--p1ai/timer/timer-css.css?v=3" rel="stylesheet" type="text/css">
+				<style type="text/css" id="timer-f0d351da89d4630d5b7e0c4c9e3c6685-style">#timerf0d351da89d4630d5b7e0c4c9e3c6685 .timer-slide-inner{border-radius:0px;background-color:rgba(110,110,100,0);color:#FFF;font-family:'Arial';}#timerf0d351da89d4630d5b7e0c4c9e3c6685 .timer-separator{padding-top:0px!important;padding-bottom:0px!important;}#timerf0d351da89d4630d5b7e0c4c9e3c6685 .timer-slide-bounding, #timerf0d351da89d4630d5b7e0c4c9e3c6685 .timer-slide-new, #timerf0d351da89d4630d5b7e0c4c9e3c6685 .timer-slide-old{padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;}</style>
+			</head>
+			<body>
+				<div class="timer300">
+					<div class="cntnt">
+						<h1 class="ostalos">До 300-летия Кузбасса осталось</h1>
+						<img src="https://xn--300-5cde9au3dap.xn--p1ai/timer/logo.png">
+						<div id="timerf0d351da89d4630d5b7e0c4c9e3c6685"><span class="timer-element-days" id="timer-element-f0d351da89d4630d5b7e0c4c9e3c6685-days" style="display: inline-block;"><span id="timer-number-f0d351da89d4630d5b7e0c4c9e3c6685-days" style="display: inline-block; color: rgb(255, 255, 255); font-family: Arial;">
+							<span id="timer-number-value-f0d351da89d4630d5b7e0c4c9e3c6685-days" style="display: none;">78</span><span id="timer-number-slide1-f0d351da89d4630d5b7e0c4c9e3c6685-days" class="timer-slide-inner timer-slide-animate" style="margin-right: 1px;"><span class="timer-slide-old"></span><span class="timer-slide-new">7</span>
+							<span class="timer-slide-bounding" style="visibility: hidden;">8</span></span><span id="timer-number-slide0-f0d351da89d4630d5b7e0c4c9e3c6685-days" class="timer-slide-inner timer-slide-animate">
+							<span class="timer-slide-old"></span><span class="timer-slide-new">8</span><span class="timer-slide-bounding" style="visibility: hidden;">8</span></span></span><span id="timer-text-f0d351da89d4630d5b7e0c4c9e3c6685-days" class="timer-text" style="display: block; color: rgb(255, 255, 255); font-family: Arial;">дней</span></span><span class="timer-separator sep-hours" id="timer-separator-f0d351da89d4630d5b7e0c4c9e3c6685-hours" style="display: inline-block; vertical-align: top; padding: 0px 1px; color: rgb(255, 255, 255); font-family: Arial;">:</span><span class="timer-element-hours" id="timer-element-f0d351da89d4630d5b7e0c4c9e3c6685-hours" style="display: inline-block;"><span id="timer-number-f0d351da89d4630d5b7e0c4c9e3c6685-hours" style="display: inline-block; color: rgb(255, 255, 255); font-family: Arial;"><span id="timer-number-value-f0d351da89d4630d5b7e0c4c9e3c6685-hours" style="display: none;">11</span>
+							<span id="timer-number-slide1-f0d351da89d4630d5b7e0c4c9e3c6685-hours" class="timer-slide-inner timer-slide-animate" style="margin-right: 1px;"><span class="timer-slide-old"></span><span class="timer-slide-new">1</span><span class="timer-slide-bounding" style="visibility: hidden;">8</span></span><span id="timer-number-slide0-f0d351da89d4630d5b7e0c4c9e3c6685-hours" class="timer-slide-inner timer-slide-animate"><span class="timer-slide-old"></span><span class="timer-slide-new">1</span><span class="timer-slide-bounding" style="visibility: hidden;">8</span></span></span><span id="timer-text-f0d351da89d4630d5b7e0c4c9e3c6685-hours" class="timer-text" style="display: block; color: rgb(255, 255, 255); font-family: Arial;">часов</span></span><span class="timer-separator sep-minutes" id="timer-separator-f0d351da89d4630d5b7e0c4c9e3c6685-minutes" style="display: inline-block; vertical-align: top; padding: 0px 1px; color: rgb(255, 255, 255); font-family: Arial;">:</span><span class="timer-element-minutes" id="timer-element-f0d351da89d4630d5b7e0c4c9e3c6685-minutes" style="display: inline-block;"><span id="timer-number-f0d351da89d4630d5b7e0c4c9e3c6685-minutes" style="display: inline-block; color: rgb(255, 255, 255); font-family: Arial;"><span id="timer-number-value-f0d351da89d4630d5b7e0c4c9e3c6685-minutes" style="display: none;">8</span><span id="timer-number-slide1-f0d351da89d4630d5b7e0c4c9e3c6685-minutes" class="timer-slide-inner timer-slide-animate" style="margin-right: 1px;"><span class="timer-slide-old">1</span><span class="timer-slide-new">0</span><span class="timer-slide-bounding" style="visibility: hidden;">8</span></span><span id="timer-number-slide0-f0d351da89d4630d5b7e0c4c9e3c6685-minutes" class="timer-slide-inner timer-slide-animate"><span class="timer-slide-old">9</span><span class="timer-slide-new">8</span><span class="timer-slide-bounding" style="visibility: hidden;">8</span></span></span><span id="timer-text-f0d351da89d4630d5b7e0c4c9e3c6685-minutes" class="timer-text" style="display: block; color: rgb(255, 255, 255); font-family: Arial;">минут</span></span><span class="timer-separator sep-secundes" id="timer-separator-f0d351da89d4630d5b7e0c4c9e3c6685-secundes" style="display: inline-block; vertical-align: top; padding: 0px 1px; color: rgb(255, 255, 255); font-family: Arial;">:</span><span class="timer-element-secundes" id="timer-element-f0d351da89d4630d5b7e0c4c9e3c6685-secundes" style="display: inline-block;"><span id="timer-number-f0d351da89d4630d5b7e0c4c9e3c6685-secundes" style="display: inline-block; color: rgb(255, 255, 255); font-family: Arial;"><span id="timer-number-value-f0d351da89d4630d5b7e0c4c9e3c6685-secundes" style="display: none;">12</span><span id="timer-number-slide1-f0d351da89d4630d5b7e0c4c9e3c6685-secundes" class="timer-slide-inner timer-slide-animate" style="margin-right: 1px;"><span class="timer-slide-old">2</span><span class="timer-slide-new">1</span><span class="timer-slide-bounding" style="visibility: hidden;">8</span></span><span id="timer-number-slide0-f0d351da89d4630d5b7e0c4c9e3c6685-secundes" class="timer-slide-inner timer-slide-animate"><span class="timer-slide-old">3</span><span class="timer-slide-new">2</span><span class="timer-slide-bounding" style="visibility: hidden;">8</span></span></span><span id="timer-text-f0d351da89d4630d5b7e0c4c9e3c6685-secundes" class="timer-text" style="display: block; color: rgb(255, 255, 255); font-family: Arial;">секунд</span></span>
+						</div>
+					</div>
+				</div>
+			</body>
+			</html>
+    	</iframe>
+	</div>
+
 </div>
 {% endblock %}
