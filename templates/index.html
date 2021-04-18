@@ -23,15 +23,19 @@
 						{% for item in data %}
 						<div class="list-group-item list-group-item-action">
 							<p style="font-size: 24px;">{{ item['title'] }}</p>
-							<p>{{ item['text'] }}</p>
-							{% if item['scr'] %}
-							<p><a href="{{ item['scr'] }}">{{ item['scr'] }}</a></p>
-							{% endif %}
+
 							{% if item['type'] == 'mp4' %}
 							<iframe src="{{ item['img'] }}" style="width: 100%; min-height: 350px;border-radius: 10px;display: block;margin-left: auto;margin-right: auto; border: 2px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							{% else %}
 							<img src="{{ item['img'] }}" style="border-radius: 10px;border: 2px; width: 100%; height: auto;border-radius: 10px;display: block;margin-left: auto;margin-right: auto; border: 2px;" alt="картинка не нашлась">
 							{% endif %}
+
+							<p>{{ item['text'] }}</p>
+
+							{% if item['scr'] %}
+							<p><a href="{{ item['scr'] }}">{{ item['scr'] }}</a></p>
+							{% endif %}<br>
+
 						</div>
 						{% endfor %}
 					</div>
