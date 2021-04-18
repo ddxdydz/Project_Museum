@@ -12,6 +12,42 @@
 	<blockquote title="blockquote">Эта группа посвящена Краеведческому музею имени заслуженного учителя РФ П. М. Петренко, г. Кемерово, МБОУ "СОШ №11".</blockquote>
 	<a href="https://yadi.sk/i/MkHxmwC-bY9QjQ">Положение о музее-комплексе им. П.М. Петренко</a><br>
 	<a href="https://yadi.sk/d/Aqb5rn7QKBlOKQ?w=1">Видео экскурсии</a><br><br>
+	
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+
+				<div class="card-body">
+					<h5 class="card-title">Special title treatment</h5>
+					<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+					<a href="#" class="btn btn-primary">Go somewhere</a>
+				</div>
+
+			</div>
+		</div>
+  <div class="col">
+    <div class="card h-100">
+
+				<div class="card-body">
+					<h5 class="card-title">Special title treatment</h5>
+					<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+					<a href="#" class="btn btn-primary">Go somewhere</a>
+				</div>
+
+			</div>
+		</div>
+  <div class="col">
+    <div class="card h-100">
+
+				<div class="card-body">
+					<h5 class="card-title">Special title treatment</h5>
+					<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+					<a href="#" class="btn btn-primary">Go somewhere</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
 
 	<div id="col1" style="width: 75%; float: left;">
 		<!--Новости-->
@@ -20,23 +56,28 @@
 			<div class="row">
 				<div class="col">
 					<div class="list-group">
+
 						{% for item in data %}
-						<div class="list-group-item list-group-item-action">
-							<p style="font-size: 24px;">{{ item['title'] }}</p>
 
-							{% if item['type'] == 'mp4' %}
-							<iframe src="{{ item['img'] }}" style="width: 100%; min-height: 350px;border-radius: 10px;display: block;margin-left: auto;margin-right: auto; border: 2px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							{% else %}
-							<img src="{{ item['img'] }}" style="border-radius: 10px;border: 2px; width: 100%; height: auto;border-radius: 10px;display: block;margin-left: auto;margin-right: auto; border: 2px;" alt="картинка не нашлась">
-							{% endif %}
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title" style="color: black;font-size: 24px;">{{ item['title'] }}</h5>
 
-							<p>{{ item['text'] }}</p>
+									{% if item['type'] == 'mp4' %}
+									<iframe src="{{ item['img'] }}" class="card-img-bottom" style="width: 100%; min-height: 350px;border-radius: 10px;display: block;margin-left: auto;margin-right: auto; border: 2px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									{% else %}
+									<img src="{{ item['img'] }}" class="card-img-bottom" style="border-radius: 10px;border: 2px; width: 100%; height: auto;border-radius: 5px;display: block;margin-left: auto;margin-right: auto; border: 2px;" alt="картинка не нашлась">
+									{% endif %}
+
+									<p class="card-text">{{ item['text'] }}</p>
+								</div>
 
 							{% if item['scr'] %}
 							<a type="button" class="btn btn-success btn-lg" href="{{ item['scr'] }}" style="width: 100%;">{{ item['scr_text'] }}</a>
-							{% endif %}<br>
+							{% endif %}
 
-						</div>
+							</div><br>
+
 						{% endfor %}
 					</div>
 				</div>
